@@ -129,4 +129,5 @@ Configuration for ESP32-CAM-MB for the ESPHome + Frigate + Home Assistant
 						- person
 
 # Bugs
-- Algumas vezes "trava" o esp32-cam-mb. A única forma de "recuperar" é instalando o firmware novamente.
+- Algumas vezes "trava" o esp32-cam-mb. A única forma de "recuperar" é instalando o firmware novamente. Então organize (versione) os firmwares desenvolvidos.
+- Em algum momentos o esp32-cam-mb apresenta alguns comportamentos estranhos, especialmente quando utilizado "carregador de celular". Parte destes comportamentos cessaram utiliziando um cabo USB full (dados + energia), mesmo que o cabo seja utilizado apenas para energizar a placa.
