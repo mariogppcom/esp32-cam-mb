@@ -12,7 +12,7 @@ Configuration for ESP32-CAM-MB for the ESPHome + Frigate + Home Assistant
   -> Windows - https://www.wch.cn/downloads/CH341SER_ZIP.html
   -> Mac - https://www.wch.cn/downloads/CH341SER_MAC_ZIP.html
 - Conectar o ESP32-CAM-MB no computador via USB.
-*Dica:* Confirmar queo cabo utilizado é do tipo *Dados + Energia*, pois existem cabos com trilha para apenas Energia.
+*Dica:* Confirmar se cabo utilizado é do tipo *Dados + Energia*, pois existem cabos com trilha para apenas Energia.
 - Abrir o site do ESP Home (https://web.esphome.io/) por algum navegador que suporte WebSerial.
 - Selecionar a porta USB Serial (COM x).
 - Se tudo estiver funcionando corretamente, vai aparecer a mensagem "conected" ao lado do nom "ESP Device".
