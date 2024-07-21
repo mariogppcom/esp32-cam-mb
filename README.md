@@ -15,7 +15,7 @@ Configuration for ESP32-CAM-MB for the ESPHome + Frigate + Home Assistant
 *Dica:* Confirmar se cabo utilizado é do tipo *Dados + Energia*, pois existem cabos com trilha para apenas Energia.
 - Abrir o site do ESP Home (https://web.esphome.io/) por algum navegador que suporte WebSerial.
 - Selecionar a porta USB Serial (COM x).
-- Se tudo estiver funcionando corretamente, vai aparecer a mensagem "conected" ao lado do nom "ESP Device".
+- Se tudo estiver funcionando corretamente, vai aparecer a mensagem "connected" ao lado do nom "ESP Device".
 
 # Segundo passo - preparar o dispostivo para uso
 - Clicar em "prepare for first use" e avançar
@@ -131,3 +131,4 @@ Configuration for ESP32-CAM-MB for the ESPHome + Frigate + Home Assistant
 # Bugs
 - Algumas vezes "trava" o esp32-cam-mb. A única forma de "recuperar" é instalando o firmware novamente. Então organize (versione) os firmwares desenvolvidos.
 - Em algum momentos o esp32-cam-mb apresenta alguns comportamentos estranhos, especialmente quando utilizado "carregador de celular". Parte destes comportamentos cessaram utiliziando um cabo USB full (dados + energia), mesmo que o cabo seja utilizado apenas para energizar a placa.
+- Foi possível notar uma perda sensível de "FPS" gerados pela câmera de acordo a qualidade do sinal "WI-FI". Recomendo a compra do kit ESP32-CAM-MB (câmera + placa principal) com o kit antena para maximizar a qualidade do sinal e, por consequência, a permitir maiores distâncias entre a câmera e o roteador mais próximo.
