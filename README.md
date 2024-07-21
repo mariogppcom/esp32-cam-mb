@@ -62,10 +62,15 @@ Configuration for ESP32-CAM-MB for the ESPHome + Frigate + Home Assistant
 		    name: "My Cam flash"
 		    pin: 4
 
+		  sensor:
+		  - platform: wifi_signal
+		    name: "WiFi ESP32-CAM"
+		    update_interval: 60s
+
 - Clicar em salvar e, em seguida, clicar em install - plug into this computer.
 - Clicar em "Download Project"
 - Voltar na aba do ESP Home *https://web.esphome.io/* e clicar em "install".
-- Neste ponto, o firmware já permitirá que o Home Assistant tenha acesso à câmera e ao LED.
+- Neste ponto, o firmware já permitirá que o Home Assistant tenha acesso à câmera e ao LED, bem como foi criada a entidade "WiFi ESP32-CAM" para monitorar a potência do sinal recebido na câmera. Este ponto é interessante ser observado, pois a qualidade/potência do sinal de wi-fi recebido influencia diretamente na quantidade de "FPS" recebido pelo Frigate e Home Assistant.
 - Para verificar se a câmera está funcionando, volte ao ESP Home (dev) e clique em "logs" na caixa do ESP32-CAM-MB. O sistema vai gerar o seguinte log refente aos frames gerados.
 
 		[13:21:00][D][esp32_camera:196]: Got Image: len=11666
@@ -127,6 +132,13 @@ Configuration for ESP32-CAM-MB for the ESPHome + Frigate + Home Assistant
 				objects:
 					track:  
 						- person
+  - Salve a aplique as configurações.
+
+# Sétimo passo - adicionar a câmera no Home Assistant
+- Instale o add-on "Frigate Proxy" (Home Assistant -> Configurações -> Add-ons -> Loja de Add-ons)
+- Após instalar, clique em "Frigate Proxy", ajustes e verifique o ip e porta do servidor http://xxx.xxx.xxx.xxx:yyyy
+- Instale a integração "Frigate" (Home Assistant -> Configurações -> Dispositivos & Serviços -> Integrações -> Adicionar integração)
+
 
 # Bugs
 - Algumas vezes "trava" o esp32-cam-mb. A única forma de "recuperar" é instalando o firmware novamente. Então organize (versione) os firmwares desenvolvidos.
